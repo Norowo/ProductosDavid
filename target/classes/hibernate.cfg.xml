@@ -19,6 +19,10 @@
 <!--  Mapea las siguientes clases anotadas si trabajásemos con mapeo XML 
 			en lugar de class pondríamos resource  -->
 <mapping class="aed.hibernate.Producto"/>
+<mapping class="aed.hibernate.Familia"/>
+<mapping class="aed.hibernate.ProductoObservacion"/>
+<mapping class="aed.hibernate.Stock"/>
+<mapping class="aed.hibernate.Tienda"/>
 <!-- la siguiente linea solo en el caso de usar mapeo con ficheros xml  -->
 <!--  <mapping resource="Persona.hbm.xml"/>  -->
 </session-factory>
