@@ -2,6 +2,7 @@ package aed.hibernate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -15,6 +16,9 @@ public class Producto {
 	private double PrecioBase;
 	private int Codfamilia;
 	private boolean Congelado;
+	
+	@ManyToOne
+	private Familia familia;
 	
 	public int getCodproducto() {
 		return Codproducto;
