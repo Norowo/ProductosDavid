@@ -20,6 +20,9 @@ public class Producto {
 	@ManyToOne
 	private Familia familia;
 	
+	@ManyToOne
+	private Stock stock;
+	
 	public int getCodproducto() {
 		return Codproducto;
 	}

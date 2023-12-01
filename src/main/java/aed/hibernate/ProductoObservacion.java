@@ -2,6 +2,9 @@ package aed.hibernate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.MapsId;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -12,6 +15,11 @@ public class ProductoObservacion {
 	@Id
 	private int Codproducto;
 	private String observacion;
+	
+	@OneToOne
+	@MapsId
+	@JoinColumn
+	private Producto producto;
 	
 	public int getCodproducto() {
 		return Codproducto;

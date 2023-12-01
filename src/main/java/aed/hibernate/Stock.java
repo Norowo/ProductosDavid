@@ -1,7 +1,11 @@
 package aed.hibernate;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,6 +17,12 @@ public class Stock {
 	private String Codtienda;
 	private int Codproducto;
 	private int Unidades;
+	
+	@OneToMany(mappedBy = "stock")
+	private List<Stock> stock;
+	
+	@ManyToOne
+	private Tienda tienda;
 	
 	public String getCodtienda() {
 		return Codtienda;
